@@ -24,6 +24,11 @@ body{
 }
 .navbar .nav-link.active{
     position: relative;
+    transition: 0.3s ease;
+}
+
+.navbar .nav-link:not(.active):hover{
+    color: #eae9e9;
 }
 .navbar .nav-link.active::before{
    content: "";
@@ -39,7 +44,6 @@ body{
 /*================ Home Section Starts ============ */
 section{
     max-width: 100vw;
-    min-height: 70vh;
 }
 #home{
     overflow: hidden;
@@ -50,24 +54,14 @@ section{
     content: "";
     height: 40%;
     width: 100%;
-    background-color: #ce643a;
+    background-color: var(--orange);
     position: absolute;
     left: 50%;
     top: 0;
     transform: translateX(-50%);
     z-index: -1;
 }
-/* #home::before{
-    content: "";
-    height: 100%;
-    width: 115%;
-    background-color: #ce643a;
-    position: absolute;
-    left: -10%;
-    transform: translateX(-50% -50%);
-    border-radius: 50%;
-    z-index: -1;
-} */
+
 #home .background{
     position: absolute;
     top: 0;
@@ -76,12 +70,19 @@ section{
     width: 150%;
     height: 100%;
     border-radius: 50% 50% 48% 52% / 0% 0% 100% 100% ;
-    background-color: #ce643a;
+    background-color: var(--orange);
     z-index: -1;
 }
 button.bookNow{
 background-color: #faa380;
 border-radius: 12px;
+transition: 0.3s ease;
+}
+
+button.bookNow:hover{
+    background-color: #fff;
+    color: var(--orange);
+    box-shadow: 0px 10px 10px #333;
 }
 
 /* ============= Services ============== */
@@ -99,6 +100,10 @@ border-radius: 12px;
 
 .cards .card img{
     height: 200px;
+    transition: 0.5s ease;
+}
+.cards .card img:hover{
+    scale: 1.2;
 }
 .cards .card p{
     margin-top: -40px;
@@ -115,7 +120,7 @@ border-radius: 12px;
     object-fit: cover;
 }
 .business-solution h2{
-    color: #ce643a;
+    color: var(--orange);
 }
 
 /* =============== About section ============== */
@@ -133,15 +138,19 @@ border-radius: 12px;
     border-radius: 8px;
     background-color: #1616167d;
     box-shadow: 8px 10px 2px #16161637;
+    justify-content: space-around;
+}
+#about .counts small{
+    font-size: 0.8rem;
 }
 #about .content-align h3{
-    color: #e2eb17;
+    color: var(--yellow);
 }
 
 #about .background{
     height:130% ;
     width: 150%;
-    background-color: #ce643a;
+    background-color: var(--orange);
     border: 30px solid #faa380;
     border-radius: 50%;
     position: absolute;
@@ -157,10 +166,10 @@ overflow: hidden;
 position: relative;
 }
 #contact h2 span{
-    color: #f6ce09;
+    color: var(--yellow);
 }
 #contact .row.p-5 {
-    background:linear-gradient(to right, #ce643a 30%, transparent 80%);
+    background:linear-gradient(to right, var(--orange) 30%, transparent 80%);
 } 
 #contact form {
     padding: 20px;
@@ -171,10 +180,10 @@ position: relative;
 }
 #contact form label{
     display: block;
-    color: #ce643a;
+    color: var(--orange);
 }
 #contact form input{
-    background-color: #ce643a;
+    background-color: var(--orange);
     border: none;
     outline: none;
     padding: 5px 10px;
@@ -194,7 +203,7 @@ position: relative;
     background:linear-gradient( #ce643a7e, #ce643a7e), url(./FIgma-Assets/Rectangle\ 5.png) no-repeat;
     background-size: cover;
     background-position: right;
-    border-left: 500px solid #ce643a;
+    border-left: 500px solid var(--orange);
 
     border-radius: 50% 0 0 10%;
     z-index: -1;
@@ -205,6 +214,12 @@ position: relative;
 footer .social a img{
     width: 50px;
     object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+footer .social a img:hover{
+    scale: 1.05;
+    box-shadow: 0px 5px 5px ;
 }
 .footer-links{
     flex-wrap: wrap;
@@ -214,9 +229,14 @@ footer .social a img{
     text-decoration: none;
     color: #686868;
     padding: 5px 15px;
+    transition: 0.3s ease;
+}
+.footer-links a:hover{
+    color: var(--yellow);
 }
 .copyright{
     flex-wrap: wrap;
+    font-weight: 500;
 }
 .back-to-top{
     width: 70px;
